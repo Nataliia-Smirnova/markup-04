@@ -35,7 +35,7 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .list {
@@ -125,38 +125,51 @@ img {
   margin-left: auto;
 }
 
-.contacts .item {
+/* .contacts .item {
   align-self: center;
-}
+} */
 
 .contacts .item:not(:last-child) {
   margin-right: 30px;
 }
 
-.contacts-link::before {
-  content: '';
-  align-self: center;
-  margin-right: 10px;
-}
+/* .contacts-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+} */
 
-.contacts-link.mail::before {
+/* .contacts-link::before {
+  content: '';
+  /* fill: '#757575'; */
+/* align-self: center;
+  margin-right: 10px; }*/
+
+/* .contacts-link.mail::before {
   width: 16px;
   height: 11.2px;
   background-image: url('../images/envelope.svg');
-}
+} */
 
-.contacts-link.phone::before {
+/* .contacts-link.phone::before {
   width: 10px;
   height: 15px;
   background-image: url('../images/vector.svg');
-}
+} */
 
-.contacts .contacts-link {
+.contacts-link {
   display: inline-flex;
+  align-items: center;
+  /* justify-content: center; */
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .contacts .contacts-link:hover,
@@ -231,7 +244,18 @@ img {
   display: flex;
 }
 
-.advantage-item::before {
+.advantage-icon {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  margin-bottom: 30px;
+}
+
+/* .advantage-item::before {
   display: block;
   content: '';
   height: 120px;
@@ -240,13 +264,13 @@ img {
   background-color: var(--secondary-background-color);
   border-radius: 4px;
   margin-bottom: 30px;
-}
+} */
 
-.icon-antenna::before {
+/* .icon-antenna::before {
   background-image: url('../images/antenna.svg');
-}
+} */
 
-.icon-clock::before {
+/* .icon-clock::before {
   background-image: url('../images/clock.svg');
 }
 
@@ -256,7 +280,7 @@ img {
 
 .icon-austronaut::before {
   background-image: url('../images/astronaut.svg');
-}
+} */
 
 .advantage-item {
   width: calc((100% - 90px) / 4);
@@ -368,16 +392,41 @@ img {
 
 .social-links {
   display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
 }
 
 .social-links-item:not(:last-child) {
   margin-right: 10px;
 }
 
+.social-links-item .social-links-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* background-color: teal; */
+  color: #afb1b8;
+}
+
+.social-links-icon .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 .social-links-icon:hover,
 .social-links-icon:focus {
-  color: var(--primary-white-color);
   background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.social-links-icon .icon:hover,
+.social-links-icon .icon:focus {
+  fill: #ffffff;
 }
 
 /* Постоянные клиенты */
@@ -387,13 +436,29 @@ img {
   justify-content: center;
 }
 
+.clients-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-logo {
+  fill: currentColor;
+}
+
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  background-color: var(--accent-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Футер */
@@ -470,16 +535,20 @@ footer {
 }
 
 .footer-social-link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--primary-white-color);
+  /* background-repeat: no-repeat;
+  background-position: center; */
 }
 
-.footer-social-link.instagram {
+/* .footer-social-link.instagram {
   background-image: url('../images/instagram-white.svg');
 }
 
@@ -493,6 +562,10 @@ footer {
 
 .footer-social-link.linkedin {
   background-image: url('../images/linkedin-white.svg');
+} */
+
+.footer-social-link .link {
+  fill: currentColor;
 }
 
 .footer-social-link:hover,
